@@ -10,7 +10,7 @@ pipeline {
         stage("Checkout") {
             steps {
                 echo "Cloning the repo"
-                Checkout scm
+                checkout scm
                 echo "cloned successfully"
                 sh 'echo "Secret is $GROQ_API_KEY"'
             }
